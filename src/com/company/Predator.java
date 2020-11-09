@@ -12,6 +12,7 @@ public class Predator {
 
     Smelling smelling;
     Vision vision;
+    Coords coords;
 
     public void hunt(Prey prey){
 

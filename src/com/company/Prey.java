@@ -12,6 +12,7 @@ public class Prey {
 
     Hearing hearing;
     Vision vision;
+    Coords coords;
 
 
     public void runAway(Predator predator){
