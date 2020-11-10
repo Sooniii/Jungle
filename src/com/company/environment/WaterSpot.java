@@ -1,6 +1,8 @@
-package com.company;
+package com.company.environment;
 
-public class WaterSpot {
+import com.company.environment.Coords;
+
+public class WaterSpot extends Ressources {
 
     int waterQuantity;
     int width;
@@ -15,7 +17,6 @@ public class WaterSpot {
     }
 
     public void update() {
-        System.out.println("Water quantity left : " + waterQuantity);
     }
 
     public int getWaterForDrink(int waterQuantityRequested){

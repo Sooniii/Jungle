@@ -1,6 +1,9 @@
-package com.company;
+package com.company.creatures;
 
-public class Prey {
+import com.company.senses.Hearing;
+import com.company.environment.Plant;
+
+public class Prey extends Animal {
     private static final int drinkingQuantity = 1;
 
     private int nbLifePoints;
@@ -12,9 +15,6 @@ public class Prey {
     private static final int maxAgeAll = 42;
 
     Hearing hearing;
-    Vision vision;
-    Coords coords;
-
 
     public void runAway(Predator predator){
 
@@ -24,19 +24,9 @@ public class Prey {
 
     }
 
-    public void move(){
-
-    }
 
     public void eat(Plant plant){
 
     }
 
-    public void drink(WaterSpot waterSpot){
-        int waterAvailable = waterSpot.getWaterForDrink(drinkingQuantity);
-    }
-
-    public void update() {
-        drink(Ecosystem.getInstance().getWaterSpot());
-    }
 }
