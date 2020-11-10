@@ -13,4 +13,22 @@ public class WaterSpot {
         this.height = height;
         this.coords = new Coords(0,0);
     }
+
+    public void update() {
+        System.out.println("Water quantity left : " + waterQuantity);
+    }
+
+    public int getWaterForDrink(int waterQuantityRequested){
+
+        int waterAvailable = waterQuantity;
+
+        if (waterQuantity > waterQuantityRequested){
+            waterQuantity -= waterQuantityRequested;
+            waterAvailable = waterQuantityRequested;
+        }
+        else if (waterQuantity > 0){
+            waterQuantity = 0;
+        }
+        return waterAvailable;
+    }
 }

@@ -1,6 +1,7 @@
 package com.company;
 
 public class Predator {
+    private static final int drinkingQuantity = 1;
 
     private int nbLifePoints;
     private int nbLifePointsMax;
@@ -31,6 +32,10 @@ public class Predator {
     }
 
     public void drink(WaterSpot waterSpot){
+        int waterAvailable = waterSpot.getWaterForDrink(drinkingQuantity);
+    }
 
+    public void update() {
+        drink(Ecosystem.getInstance().getWaterSpot());
     }
 }
